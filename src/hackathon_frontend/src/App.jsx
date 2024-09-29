@@ -1,30 +1,16 @@
-import { useState } from 'react';
-import { hackathon_backend } from 'declarations/hackathon_backend';
+import React from 'react';
+import Header from './components/Header';
+import CryptoInfo from './components/CryptoInfo';
+import ExchangeRates from './components/ExchangeRates';
+import './styles/App.css';
 
 function App() {
-  const [greeting, setGreeting] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    hackathon_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <div className="App">
+      <Header />
+      <CryptoInfo />
+      <ExchangeRates />
+    </div>
   );
 }
 

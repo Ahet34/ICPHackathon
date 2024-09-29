@@ -1,0 +1,42 @@
+.crypto-info-container {
+  overflow: hidden; /* Oculta el contenido que desborda */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  width: 100%; /* Asegúrate de que ocupe el ancho completo */
+  position: static; /* Para colocar el texto fijo en su lugar */
+  background-color: black; /* Fondo negro */
+  padding: 20px; /* Espaciado interno */
+}
+
+.fixed-text {
+  text-align: start;
+  font-weight: bold; /* Puedes ajustar el peso de la fuente según lo necesites */
+  font-size: 1.5em; /* Tamaño de fuente */
+  color: white; /* Color blanco para el texto "AHORA" */
+  padding: 15px;
+}
+
+.separator {
+  font-weight: bold; /* Hace que el separador se vea más grueso */
+  color: #00d1a7; /* Color verde fuerte */
+  margin-left: 5px; /* Espaciado entre "AHORA" y "|" */
+}
+
+.crypto-info {
+  box-sizing: border-box;
+  display: inline-block; /* Permite que el contenido se desplace en línea */
+  animation: ticker 10s linear infinite; /* Aplicamos la animación */
+  color: white; /* Color blanco para el texto que se mueve */
+  left: 50%; /* Comienza desde el 50% de la pantalla */
+  transform: translateX(50%); /* Ajusta para centrar el inicio del texto */
+}
+
+/* Animación de desplazamiento */
+@keyframes ticker {
+  0% {
+    transform: translateX(100%); /* Comienza desde el centro */
+  }
+  100% {
+    transform: translateX(-100%); /* Termina a la izquierda */
+  }
+}
+
