@@ -4,6 +4,7 @@
 Frontend canister (hackathon_frontend):
 
 ID: bd3sg-teaaa-aaaaa-qaaba-cai
+
 Backend canister (hackathon_backend):
 
 ID: bkyz2-fmaaa-aaaaa-qaaaq-cai
